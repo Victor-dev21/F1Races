@@ -1,10 +1,49 @@
 .App {
   text-align: center;
 }
-
+.h1{
+  font-family: Monaco;
+  color: red
+  
+}
+.heading-place{
+  margin: auto;
+}
+.centered {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+.container{
+  display: flex;
+  justify-content: center;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+}
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #C41E3A;
+  color: white;
 }
 
 @media (prefers-reduced-motion: no-preference) {

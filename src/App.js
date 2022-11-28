@@ -1,25 +1,31 @@
 import logo from './logo.svg';
 import './App.css';
-
-function App() {
+import Video from './components/ImageRetreive'
+import React, {Component} from 'react'
+import SearchComponent from './components/SearchComponent';
+import {NavBar} from './components/NavBarComponent';
+import CircuitComponent from './components/CircuitComponent';
+import {Routes, Route, Router} from 'react-router-dom'
+import F1Api from './components/api'
+class App extends Component {
+  constructor(){
+    super();
+  }
+  render(){
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+    
+     <>
+      <NavBar/>
+      <Routes>
+        <Route path='circuits' element={<CircuitComponent races={F1Api.circuits()}/>}/>
+        <Route path='/' element={<SearchComponent />}/>
+      </Routes>
+      </>
+      
     </div>
   );
+}
 }
 
 export default App;
